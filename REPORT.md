@@ -1,12 +1,14 @@
-# REPORT
+# Deep-Reinforcement-Multiagent Project REPORT
+
+This report describes the details of the implementation, along with ideas for future work
 
 The algorithm chosen to solve this environment is MADDPG. As starting point Udacity's code for DDPG was used. The code base needed quite a few changes to accomodate MADDPG. In MADDPG the critic has full few of the state and actions in the environment. The actors only have visibility of their own states.
 
-**MADDPG block diagram:**
+MADDPG block diagram:
 
 ![MADDPG block diagram](maddpg_block.png)
 
-The critic and actor neural network are each 3 layers with first hidden layer at 400 units and second hidden layer at 300 units. For the actor the tanh activation is used, since the output needs to be in range -1 to +1. Some noise is added for exploration. The noise process used is Ohrnstein Uhlenbeck. The critic output has no activation function.
+The critic and actor neural network are each 3 layers with first hidden layer at 400 units and second hidden layer at 300 units. For the actor the tanh activation is used, since the output needs to be in range -1 to +1. Some noise is added for exploration. The noise process used is Ohrnstein Uhlenbeck. The critic output has no activation function. Both networks use target networks to stabilize learning.
 
 ```
 Actor(
@@ -42,11 +44,11 @@ The learning rate was slight increased to 5-e4 and the replay buffer size was in
 
 ## Attempt 3 and Solution
 
-The actions of the other agent are now fed into the 2nd layer of the critic along with own actions. Number of max episodes was increased to 10,000 to give enough time for learning.
+The actions of the other agent are now fed into the 2nd layer of the critic along with own actions. Number of max episodes was increased to 10,000 to give enough time for learning. See *Tennis.md* or *Tennis.html* for log of run that solved the environment.
 
 ![3rd score](scores_2.png)
 
-You can find a screen recording of the agents playing tennis in `Tennis.mov`.
+You can find a screen recording of the agents playing tennis in *Tennis.mov*.
 
 Hyper-parameters of solution:
 

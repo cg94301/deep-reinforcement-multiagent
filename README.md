@@ -4,7 +4,7 @@
 [image2]: https://user-images.githubusercontent.com/10624937/42135622-e55fb586-7d12-11e8-8a54-3c31da15a90a.gif "Soccer"
 
 
-# deep-reinforcement-multiagent
+# Deep-Reinforcement-Multiagent Project
 
 This repository implements a solution to Project 3, Collaboration and Competition, of the Udacity Deep Reinforcement Learning Nanodegree.
 
@@ -26,7 +26,7 @@ Then launch Jupyter Notebooks:
 
 Inside Jupyter launch Tennis.ipynb to train agent. Inside notebook run all cells from menu or manually advance through notebook with Shift+Enter. On Udacity GPU workspace this project takes about 4h to run.
 
-See REPORT.md for explanation of approach taken. See Tennis.md or Tennis.html for log of run that solved the environment.
+See *REPORT.md* for explanation of approach taken. 
 
 
 ### Introduction from Udacity
